@@ -1,0 +1,41 @@
+{
+  "name": "ai-job-agent",
+  "version": "1.0.0",
+  "description": "AI Agent for automated job search and applications with Mobile & Web support",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "api:dev": "ts-node src/api/server.ts",
+    "db:setup": "ts-node src/database/setup.ts",
+    "db:migrate": "ts-node src/database/migrate.ts",
+    "search:bayt": "ts-node src/agents/baytAgent.ts",
+    "search:naukri": "ts-node src/agents/naukriAgent.ts",
+    "search:gulftalent": "ts-node src/agents/gulftalentAgent.ts",
+    "search:upwork": "ts-node src/agents/upworkAgent.ts",
+    "search:linkedin": "ts-node src/agents/linkedinAgent.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "pg": "^8.11.0",
+    "puppeteer": "^21.0.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.1.0",
+    "multer": "^1.4.5-lts.1",
+    "pdfparse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/express": "^4.17.20",
+    "@types/multer": "^1.4.11",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.2.0"
+  }
+}
